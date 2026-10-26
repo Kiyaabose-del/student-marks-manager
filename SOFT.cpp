@@ -9,11 +9,9 @@ int main() {
     int marks[5][3];
     double totals[5];
     double averages[5];
-
-
-    
-    cout << "Enter Student Names "<<endl;
-    for (int i = 0; i <5; i++) {
+ 
+    cout << "Enter Name of the students: "<<endl;
+    for (int i = 0; i<5; i++) {
         cout << "Enter name:";
         cin.getline(names[i], 20);
     }
@@ -79,7 +77,8 @@ cout<<"Top student: "<<big<<" : "<<stud;
   else if(totals[4]>totals[0]&&totals[4]>totals[1]&&totals[4]>totals[2]&&totals[4]>totals[3]){
     cout << "Top student: " << names[4] << endl;
 }
-  
+
+    
     return 0;
 }
 
