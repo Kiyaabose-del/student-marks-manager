@@ -9,6 +9,8 @@ int main() {
     int marks[5][3];
     double totals[5];
     double averages[5];
+    int big=totals[0];
+    string stud;
  
     cout<<"Enter Name of the students: "<<endl;
     for (int i = 0; i<5; i++) {
@@ -49,23 +51,15 @@ int main() {
         cout<<setw(10)<<averages[i]<<endl;
     }
 
-  
-  if(totals[0]>totals[1]&&totals[0]>totals[2]&&totals[0]>totals[3]&&totals[0]>totals[4]){
-    cout<<"Top student: "<<names[0]<<endl;
-  }
-  else if(totals[1]>totals[0]&&totals[1]>totals[2]&&totals[1]>totals[3]&&totals[1]>totals[4]){
-    cout<<"Top student: "<<names[1]<<endl;
-  }
-  else if(totals[2]>totals[0]&&totals[2]>totals[1]&&totals[2]>totals[3]&&totals[2]>totals[4]){
-    cout<<"Top student: "<<names[2]<<endl;
-  }
-  else if(totals[3]>totals[0]&&totals[3]>totals[1]&&totals[3]>totals[2]&&totals[3]>totals[4]){
-    cout<<"Top student: "<<names[3]<<endl;
-}
-  else if(totals[4]>totals[0]&&totals[4]>totals[1]&&totals[4]>totals[2]&&totals[4]>totals[3]){
-    cout<<"Top student: "<<names[4]<<endl;
-}
 
+     for(int i=0;i<5;i++){
+         if(totals[i]>big){
+             big=totals[i];
+             stud=names[i];
+         }
+     }
+
+cout<<"Top student: "<<stud;
     
     return 0;
 }
